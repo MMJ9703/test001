@@ -38,14 +38,14 @@ def threaded_task(data):
         print ('===== run task')
 
         # load imbalance2  from  mysql 
-        data_1 = pd.read_sql("select * from  'TABLE 1' ", con=sqlEngine, index_col=None)
+        data_1 = pd.read_sql("select * from  TABLE1 ", con=sqlEngine, index_col=None)
 
         print ('data1 to dataframe')
 
         data_2 = fun(data_1)
 
         # dataframe to  mysql 
-        data_2.to_sql('TABLE 2', con=sqlEngine, if_exists='append', index=False)
+        data_2.to_sql('TABLE2', con=sqlEngine, if_exists='append', index=False)
         
 
     except Exception as e:

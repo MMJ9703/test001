@@ -1,0 +1,10 @@
+numpy
+pandas
+PyWavelets
+pymongo
+gunicorn>=20.0.0; python_version >= '3.5'
+six
+Flask
+flask-executor
+sqlalchemy
+pymysql

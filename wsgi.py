@@ -38,7 +38,7 @@ def threaded_task(data):
         print ('===== run task')
 
         # load imbalance2  from  mysql 
-        data_1 = pd.read_sql("select * from  TABLE 1 ", con=sqlEngine, index_col=None)
+        data_1 = pd.read_sql("select * from  'TABLE 1' ", con=sqlEngine, index_col=None)
 
         print ('data1 to dataframe')
 

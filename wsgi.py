@@ -52,7 +52,7 @@ def threaded_task():
         # 算法执行
         status = mainf(ID, Input_Time, days, sqlEngine)
         # data["param"]["status"] = status
-        print(statue)
+        print(status)
         # 将数据写入mysql数据库中，设置查询pd.to_sql()函数
         
         

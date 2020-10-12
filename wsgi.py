@@ -27,16 +27,6 @@ sqlEngine = create_engine(mysql_uri, pool_recycle=3600)
 
 print ('=== mysql uri: ' + mysql_uri)
 
-# rest  api（应用执行端口）
-@application.route('/')
-def hello():
-    executor.submit(threaded_task)
-    return b'mainf '
-
-if __name__ == '__main__':
-
-    application.run()
-
 def threaded_task():  
     try:
 
@@ -62,3 +52,14 @@ def threaded_task():
         print (e)
         raise e
     return True
+
+# rest  api（应用执行端口）
+@application.route('/')
+def hello():
+    executor.submit(threaded_task)
+    return b'mainf '
+
+if __name__ == '__main__':
+
+    application.run()
+
